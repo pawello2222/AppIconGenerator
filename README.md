@@ -5,7 +5,15 @@
 
 A library for creating App Icons from `SwiftUI` views.
 
-## Example
+### Install
+
+AppIconGenerator is available as a Swift Package.
+
+```
+import AppIconGenerator
+```
+
+### Examples
 
 Assuming we have a `SwiftUI` View:
 ```
@@ -25,6 +33,9 @@ AppIconGenerator().generateIcons(from: IconView(), filename = "Icon", sizes = [1
 ```
 Full demo:
 ```
+import AppIconGenerator
+import SwiftUI
+
 struct ContentView: View {
     var body: some View {
         IconView()
@@ -48,3 +59,13 @@ struct IconView: View {
     }
 }
 ```
+
+### Output
+
+Generated icons will be saved in the documents directory (the full path will be printed to the console):
+
+> File saved to: /Users/.../Library/Developer/CoreSimulator/Devices/.../Documents/Icon1024.png
+
+### License
+
+AppIconGenerator is available under the MIT license. See the LICENSE file for more info.
