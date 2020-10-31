@@ -5,7 +5,7 @@
 
 A library for creating App Icons from `SwiftUI` views.
 
-### Install
+### Installation
 
 AppIconGenerator is available as a Swift Package.
 
