@@ -1,4 +1,5 @@
 ![Language: Swift](https://img.shields.io/badge/language-swift-orange.svg)
+![Framework: SwiftUI](https://img.shields.io/badge/framework-swiftui-brightgreen.svg)
 ![platforms](https://img.shields.io/badge/platforms-iPhone%20%7C%20iPad%20%7C%20macOS-lightgrey)
 
 ## AppIconGenerator
