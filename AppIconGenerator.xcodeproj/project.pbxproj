@@ -13,7 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		"AppIconGenerator::AppIconGenerator::Product" /* AppIconGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppIconGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"AppIconGenerator::AppIconGenerator::Product" /* AppIconGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppIconGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		OBJ_14 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_15 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = AppIconGenerator.xcodeproj/AppIconGenerator_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -184,7 +183,6 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = AppIconGenerator.xcodeproj/AppIconGenerator_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
