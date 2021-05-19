@@ -9,6 +9,8 @@
 import SwiftUI
 
 public class AppIconGenerator {
+    public static let shared = AppIconGenerator()
+
     public init() {}
 
     public func generateIcons<V>(from view: V, filename: String = "Icon", sizes: [Int] = appIconSizes) where V: View {
@@ -21,8 +23,16 @@ public class AppIconGenerator {
     }
 }
 
-public extension AppIconGenerator {
-    static let appIconSizes = [
+extension AppIconGenerator {
+    public static let appIconSizes = [
         20, 29, 40, 58, 60, 76, 80, 87, 120, 152, 167, 180, 1024,
     ]
+}
+
+// MARK: - View helpers
+
+extension View {
+    public func generateIcons(filename: String = "Icon", sizes: [Int] = AppIconGenerator.appIconSizes) {
+        AppIconGenerator.shared.generateIcons(from: self, filename: filename, sizes: sizes)
+    }
 }
