@@ -5,14 +5,13 @@
   <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager"></a>
   <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 </p>
+<br>
 
 # AppIconGenerator
 
 A library for creating App Icons from SwiftUI views.
 
 ## Installation
-
-### Swift Package Manager
 
 AppIconGenerator is available as a Swift Package.
 
