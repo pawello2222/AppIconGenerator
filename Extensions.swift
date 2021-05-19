@@ -8,8 +8,10 @@
 
 import SwiftUI
 
-public extension View {
-    func saveToFile(name: String, size: CGSize) {
+// MARK: - View
+
+extension View {
+    public func saveToFile(name: String, size: CGSize) {
         guard let imageData = asUIImage(size: size)?.pngData() else {
             print("Error retrieving PNG data of image")
             return
@@ -18,8 +20,8 @@ public extension View {
     }
 }
 
-public extension View {
-    func asUIImage(size: CGSize) -> UIImage? {
+extension View {
+    public func asUIImage(size: CGSize) -> UIImage? {
         guard let rootVC = UIApplication.shared.windows.first?.rootViewController else {
             print("Could not access rootViewController")
             return nil
@@ -35,8 +37,10 @@ public extension View {
     }
 }
 
-public extension UIView {
-    func asUIImage(size: CGSize, scale: CGFloat = 1) -> UIImage {
+// MARK: - UIView
+
+extension UIView {
+    public func asUIImage(size: CGSize, scale: CGFloat = 1) -> UIImage {
         let format = UIGraphicsImageRendererFormat(for: .init(displayScale: 1))
         return UIGraphicsImageRenderer(size: size, format: format).image { context in
             context.cgContext.scaleBy(x: 1 / scale, y: 1 / scale)
@@ -45,8 +49,10 @@ public extension UIView {
     }
 }
 
-public extension Data {
-    func writeToDocumentDirectory(filename: String, fileExt: String) {
+// MARK: - Data
+
+extension Data {
+    public func writeToDocumentDirectory(filename: String, fileExt: String) {
         do {
             let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let outputFileURL = documentDirectory
@@ -60,8 +66,10 @@ public extension Data {
     }
 }
 
+// MARK: - CGSize
+
 extension CGSize {
-    static func * (size: CGSize, value: CGFloat) -> CGSize {
+    fileprivate static func * (size: CGSize, value: CGFloat) -> CGSize {
         return CGSize(width: size.width * value, height: size.height * value)
     }
 }
