@@ -18,7 +18,8 @@ let package = Package(
     targets: [
         .target(
             name: "AppIconGenerator",
-            dependencies: []
+            dependencies: [],
+            path: "Sources"
         ),
     ]
 )

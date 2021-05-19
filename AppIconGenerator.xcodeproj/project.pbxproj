@@ -32,13 +32,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_11 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_12 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +45,6 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_11 /* Tests */,
 				OBJ_12 /* Products */,
 				OBJ_14 /* LICENSE */,
 				OBJ_15 /* README.md */,
@@ -63,19 +55,10 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* AppIconGenerator */,
-			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_8 /* AppIconGenerator */ = {
-			isa = PBXGroup;
-			children = (
 				OBJ_9 /* AppIconGenerator.swift */,
 				OBJ_10 /* Extensions.swift */,
 			);
-			name = AppIconGenerator;
-			path = Sources/AppIconGenerator;
+			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
