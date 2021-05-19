@@ -32,6 +32,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5888A532655D48200FC185E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* AppIconGenerator.swift */,
+				OBJ_10 /* Extensions.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		OBJ_12 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -40,26 +49,16 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Sources */,
+				E5888A532655D48200FC185E /* Sources */,
 				OBJ_12 /* Products */,
 				OBJ_14 /* LICENSE */,
 				OBJ_15 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
-		};
-		OBJ_7 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* AppIconGenerator.swift */,
-				OBJ_10 /* Extensions.swift */,
-			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -111,7 +110,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
