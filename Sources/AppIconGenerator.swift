@@ -32,7 +32,9 @@ extension AppIconGenerator {
 // MARK: - View helpers
 
 extension View {
-    public func generateIcons(filename: String = "Icon", sizes: [Int] = AppIconGenerator.appIconSizes) {
-        AppIconGenerator.shared.generateIcons(from: self, filename: filename, sizes: sizes)
+    public func generateIcons(filename: String = "Icon", sizes: [Int] = AppIconGenerator.appIconSizes) -> some View {
+        onAppear {
+            AppIconGenerator.shared.generateIcons(from: self, filename: filename, sizes: sizes)
+        }
     }
 }
