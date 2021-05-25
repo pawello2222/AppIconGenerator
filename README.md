@@ -1,9 +1,10 @@
 <p align="center">
-  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://github.com/pawello2222/AppIconGenerator/actions/workflows/swift.yml/badge.svg" alt="Build"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/github/workflow/status/pawello2222/AppIconGenerator/build?logo=github" alt="Build"></a>
   <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/language-swift-orange.svg" alt="Language"></a>
   <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/platform-iOS-lightgrey" alt="Supported Platform"></a>
   <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager"></a>
-  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator/releases"><img src="https://img.shields.io/github/v/release/pawello2222/AppIconGenerator" alt="Release version"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/pawello2222/AppIconGenerator" alt="License"></a>
 </p>
 <br>
 
@@ -17,7 +18,7 @@ AppIconGenerator is available as a Swift Package.
 
 ## Examples
 
-Assuming we have a `SwiftUI` View:
+Assuming we have a SwiftUI view:
 ``` Swift
 struct IconView: View { ... }
 ```
