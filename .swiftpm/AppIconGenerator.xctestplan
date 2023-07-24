@@ -1,0 +1,26 @@
+{
+  "configurations" : [
+    {
+      "id" : "33E3CE5E-3A91-4485-AFD4-0F7586DADAD9",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "AppIconGenerator",
+          "name" : "AppIconGenerator"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+
+  ],
+  "version" : 1
+}

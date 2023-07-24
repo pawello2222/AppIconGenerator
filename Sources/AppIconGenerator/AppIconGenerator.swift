@@ -20,35 +20,84 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import OSLog
 import SwiftUI
 
-public class AppIconGenerator {
-    public static let shared = AppIconGenerator()
+public struct AppIconGenerator<Content> where Content: View {
+    private let content: () -> Content
 
-    public init() {}
+    public init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content
+    }
 
-    public func generateIcons<V>(from view: V, filename: String = "Icon", sizes: [Int] = appIconSizes) where V: View {
-        sizes.forEach {
-            view
-                .edgesIgnoringSafeArea(.all)
-                .environment(\.sizeCategory, .large)
-                .saveToFile(name: "\(filename)\($0)", size: CGSize(width: $0, height: $0))
+    @MainActor
+    public func generate(iconSet: IconSet, name: String) {
+        iconSet.sizes.forEach {
+            generate(size: $0, name: name)
+        }
+    }
+
+    @MainActor
+    public func generate(size: CGFloat, name: String) {
+        let view = view(size: .init(size))
+        let renderer = ImageRenderer(content: view)
+
+        let imageData: Data
+        #if os(macOS)
+        guard
+            let tiffData = renderer.nsImage?.tiffRepresentation,
+            let bitmap = NSBitmapImageRep(data: tiffData),
+            let data = bitmap.representation(using: .png, properties: [:])
+        else {
+            Logger.main.error("Error creating data from the image.")
+            return
+        }
+        imageData = data
+        #else
+        guard let data = renderer.uiImage?.pngData() else {
+            Logger.main.error("Error creating data from the image.")
+            return
+        }
+        imageData = data
+        #endif
+
+        do {
+            let url = try save(data: imageData, name: name, size: size)
+            Logger.main.notice("Icon saved to: \(url.path(), privacy: .public)")
+        } catch {
+            Logger.main.error("Error savin icons: \(error)")
         }
     }
 }
 
+// MARK: - Helpers
+
 extension AppIconGenerator {
-    public static let appIconSizes = [
-        20, 29, 40, 58, 60, 76, 80, 87, 120, 152, 167, 180, 1024,
-    ]
-}
+    private func view(size: Int) -> some View {
+        content()
+            .ignoresSafeArea()
+            .frame(width: .init(size), height: .init(size))
+            .environment(\.sizeCategory, .large)
+    }
 
-// MARK: - View helpers
-
-extension View {
-    public func generateIcons(filename: String = "Icon", sizes: [Int] = AppIconGenerator.appIconSizes) -> some View {
-        onAppear {
-            AppIconGenerator.shared.generateIcons(from: self, filename: filename, sizes: sizes)
+    private func save(data: Data, name: String, size: CGFloat) throws -> URL {
+        let fileManager: FileManager = .default
+        guard let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            let message = "Error accessing document directory."
+            Logger.main.critical("\(message)")
+            fatalError(message)
         }
+        let directoryURL = documentDirectory
+            .appendingPathComponent("AppIconGenerator")
+            .appendingPathComponent(name)
+        try fileManager.createDirectory(
+            atPath: directoryURL.path,
+            withIntermediateDirectories: true
+        )
+        let fileURL = directoryURL
+            .appendingPathComponent("\(name)-\(Int(size))")
+            .appendingPathExtension(for: .png)
+        try data.write(to: fileURL)
+        return fileURL
     }
 }
