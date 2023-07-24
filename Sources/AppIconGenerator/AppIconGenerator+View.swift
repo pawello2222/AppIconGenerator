@@ -28,7 +28,7 @@ extension View {
             await AppIconGenerator {
                 self
             }
-            .generate(iconSet: iconSet, name: name)
+            .generateIcons(for: iconSet, name: name)
         }
     }
 
@@ -37,7 +37,7 @@ extension View {
             await AppIconGenerator {
                 self
             }
-            .generate(size: size, name: name)
+            .generateIcon(size: size, name: name)
         }
     }
 }

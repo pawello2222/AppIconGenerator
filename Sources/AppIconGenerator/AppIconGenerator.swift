@@ -31,14 +31,14 @@ public struct AppIconGenerator<Content> where Content: View {
     }
 
     @MainActor
-    public func generate(iconSet: IconSet, name: String) {
+    public func generateIcons(for iconSet: IconSet, name: String) {
         iconSet.sizes.forEach {
-            generate(size: $0, name: name)
+            generateIcon(size: $0, name: name)
         }
     }
 
     @MainActor
-    public func generate(size: CGFloat, name: String) {
+    public func generateIcon(size: CGFloat, name: String) {
         let view = view(size: .init(size))
         let renderer = ImageRenderer(content: view)
 

@@ -33,7 +33,9 @@ A library for creating App Icons from SwiftUI views.
 
   1. [Installation](#installation)
   2. [Highlights](#highlights)
-  3. [License](#license)
+  3. [Icon sets](#iconsets)
+  4. [Demo](#demo)
+  5. [License](#license)
 
 </details>
 
@@ -52,8 +54,71 @@ App Icon Generator is available as a Swift Package.
 
 ## Highlights <a name="highlights"></a>
 
-```swift
+Generate icons using `AppIconGenerator`
 
+```swift
+AppIconGenerator {
+    IconView()
+}
+.generateIcons(for: .iOS)
+```
+
+or directly from within a SwiftUI block
+
+```swift
+IconView()
+    .generateIcons(for: .iOS)
+```
+
+## Icon sets <a name="iconsets"></a>
+
+```swift
+extension IconSet {
+    public var sizes: [CGFloat] {
+        switch self {
+        case .iOS:
+            return [40, 58, 60, 76, 80, 87, 114, 120, 128, 136, 152, 167, 180, 192, 1024]
+        case .macOS:
+            return [16, 32, 64, 128, 256, 512, 1024]
+        case .watchOS:
+            return [44, 48, 55, 58, 60, 64, 66, 80, 87, 88, 92, 100, 102, 108, 172, 196, 216, 234, 258, 1024]
+        case .single:
+            return [1024]
+        case .custom(let sizes):
+            return sizes
+        }
+    }
+}
+```
+
+## Demo <a name="demo"></a>
+
+```swift
+import AppIconGenerator
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        IconView()
+            .generateIcons(for: .iOS, name: "MyIcon")
+    }
+}
+
+struct IconView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                Color.blue
+                Circle()
+                    .fill(Color.red)
+                    .frame(
+                        width: geometry.size.width / 2,
+                        height: geometry.size.height / 2
+                    )
+            }
+        }
+    }
+}
 ```
 
 ## License <a name="license"></a>
