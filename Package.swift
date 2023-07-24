@@ -18,6 +18,10 @@ let package = Package(
         .target(
             name: "AppIconGenerator",
             dependencies: []
+        ),
+        .testTarget(
+            name: "AppIconGeneratorTests",
+            dependencies: ["AppIconGenerator"]
         )
     ]
 )
