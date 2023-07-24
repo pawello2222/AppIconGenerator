@@ -1,73 +1,69 @@
 <p align="center">
-  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/github/workflow/status/pawello2222/AppIconGenerator/build?logo=github" alt="Build"></a>
-  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/language-swift-orange.svg" alt="Language"></a>
-  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/platform-iOS-lightgrey" alt="Supported Platform"></a>
-  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager"></a>
-  <a href="https://github.com/pawello2222/AppIconGenerator/releases"><img src="https://img.shields.io/github/v/release/pawello2222/AppIconGenerator" alt="Release version"></a>
-  <a href="https://github.com/pawello2222/AppIconGenerator/blob/main/LICENSE"><img src="https://img.shields.io/github/license/pawello2222/AppIconGenerator" alt="License"></a>
+  <img src="./.resources/Assets/logo.png" alt="App Icon Generator logo" height=150>
 </p>
-<br>
+<p align="center">
+  <a href="https://github.com/pawello2222/AppIconGenerator/actions?query=branch%3Amain">
+    <img src="https://img.shields.io/github/actions/workflow/status/pawello2222/AppIconGenerator/ci.yml?logo=github" alt="Build">
+  </a>
+  <a href="https://codecov.io/gh/pawello2222/AppIconGenerator">
+    <img src="https://codecov.io/gh/pawello2222/AppIconGenerator/branch/main/graph/badge.svg?token=" alt="Code coverage">
+  </a>
+  <a href="https://github.com/pawello2222/AppIconGenerator">
+    <img src="https://img.shields.io/badge/language-swift-orange.svg" alt="Language">
+  </a>
+  <a href="https://github.com/pawello2222/AppIconGenerator#installation">
+    <img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg" alt="Supported platforms">
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/pawello2222/AppIconGenerator#installation">
+    <img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager">
+  </a>
+  <a href="https://github.com/pawello2222/AppIconGenerator/releases">
+    <img src="https://img.shields.io/github/v/release/pawello2222/AppIconGenerator" alt="Release version">
+  </a>
+  <a href="https://github.com/pawello2222/AppIconGenerator/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/github/license/pawello2222/AppIconGenerator" alt="License">
+  </a>
+</p>
 
-# AppIconGenerator
+# App Icon Generator
 
 A library for creating App Icons from SwiftUI views.
 
-## Installation
+<details>
+  <summary>
+    <b>Table of Contents</b>
+  </summary>
 
-AppIconGenerator is available as a Swift Package.
+  1. [Installation](#installation)
+  2. [Highlights](#highlights)
+  3. [License](#license)
 
-## Examples
+</details>
 
-Assuming we have a SwiftUI view:
-``` Swift
-struct IconView: View { ... }
-```
-we can save it directly to a file:
-``` Swift
-IconView()
-    .generateIcons()
-```
-By default it creates icons for all App Icon sizes:
-``` Swift
-static let appIconSizes = [20, 29, 40, 58, 60, 76, 80, 87, 120, 152, 167, 180, 1024]
-```
-However, you're free to modify the parameters as you wish:
-``` Swift
-AppIconGenerator.shared.generateIcons(from: IconView(), filename = "Icon", sizes = [100, 200, 300])
-```
-Full demo:
-``` Swift
-import AppIconGenerator
-import SwiftUI
+## Installation <a name="installation"></a>
 
-struct ContentView: View {
-    var body: some View {
-        IconView()
-            .frame(width: 100, height: 100)
-            .generateIcons()
-    }
-}
+### Requirements
+* iOS 16.0+
+* macOS 13.0+
+* watchOS 9.0+
+* tvOS 16.0+
 
-struct IconView: View {
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color.blue
-                Circle()
-                    .fill(Color.red)
-                    .frame(width: geometry.size.width / 2, height: geometry.size.height / 2)
-            }
-        }
-    }
-}
+### Swift Package Manager
+
+App Icon Generator is available as a Swift Package.
+
+```swift
+.package(url: "https://github.com/pawello2222/AppIconGenerator.git", .upToNextMajor(from: "1.0.0"))
 ```
 
-### Output
+## Highlights <a name="highlights"></a>
 
-Generated icons will be saved in the documents directory (the full path will be printed to the console):
+```swift
 
-> File saved to: /Users/.../Library/Developer/CoreSimulator/Devices/.../Documents/Icon1024.png
+```
 
-## License
+## License <a name="license"></a>
 
-AppIconGenerator is available under the MIT license. See the [LICENSE](https://github.com/pawello2222/AppIconGenerator/blob/main/LICENSE) file for more info.
+App Icon Generator is available under the MIT license. See the [LICENSE](./LICENSE.md) file for more info.
