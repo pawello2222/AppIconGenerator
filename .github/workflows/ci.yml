@@ -8,7 +8,7 @@ on:
 
 env:
   LCOV_PATH: .build/artifacts/info.lcov
-  BUILD_FOLDER: .build/debug/AppliablePackageTests.xctest/Contents/MacOS/AppliablePackageTests
+  BUILD_FOLDER: .build/debug/AppIconGeneratorPackageTests.xctest/Contents/MacOS/AppIconGeneratorPackageTests
   PROFDATA_FOLDER: .build/debug/codecov/default.profdata
 
 jobs:
