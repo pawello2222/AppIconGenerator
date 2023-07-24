@@ -1,18 +1,20 @@
-// swift-tools-version:5.3
+// swift-tools-version: 5.7
 
 import PackageDescription
 
 let package = Package(
     name: "AppIconGenerator",
     platforms: [
-        .iOS(.v13),
-        .macOS(.v10_15),
+        .iOS(.v16),
+        .macOS(.v13),
+        .watchOS(.v9),
+        .tvOS(.v16)
     ],
     products: [
         .library(
             name: "AppIconGenerator",
             targets: ["AppIconGenerator"]
-        ),
+        )
     ],
     dependencies: [],
     targets: [
@@ -20,7 +22,6 @@ let package = Package(
             name: "AppIconGenerator",
             dependencies: [],
             path: "Sources"
-        ),
-    ],
-    swiftLanguageVersions: [.v5]
+        )
+    ]
 )
