@@ -5,17 +5,12 @@
   <a href="https://github.com/pawello2222/AppIconGenerator/actions?query=branch%3Amain">
     <img src="https://img.shields.io/github/actions/workflow/status/pawello2222/AppIconGenerator/ci.yml?logo=github" alt="Build">
   </a>
-  <a href="https://codecov.io/gh/pawello2222/AppIconGenerator">
-    <img src="https://codecov.io/gh/pawello2222/AppIconGenerator/branch/main/graph/badge.svg?token=" alt="Code coverage">
-  </a>
   <a href="https://github.com/pawello2222/AppIconGenerator">
     <img src="https://img.shields.io/badge/language-swift-orange.svg" alt="Language">
   </a>
   <a href="https://github.com/pawello2222/AppIconGenerator#installation">
     <img src="https://img.shields.io/badge/platform-iOS-lightgrey.svg" alt="Supported platforms">
   </a>
-</p>
-<p align="center">
   <a href="https://github.com/pawello2222/AppIconGenerator#installation">
     <img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager">
   </a>
