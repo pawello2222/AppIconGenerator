@@ -16,12 +16,10 @@ let package = Package(
             targets: ["AppIconGenerator"]
         )
     ],
-    dependencies: [],
     targets: [
         .target(
             name: "AppIconGenerator",
-            dependencies: [],
-            path: "Sources"
+            dependencies: []
         )
     ]
 )
