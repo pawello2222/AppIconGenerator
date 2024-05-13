@@ -2,24 +2,12 @@
   <img src="./.resources/Assets/logo.png" alt="App Icon Generator logo" height=150>
 </p>
 <p align="center">
-  <a href="https://github.com/pawello2222/AppIconGenerator/actions?query=branch%3Amain">
-    <img src="https://img.shields.io/github/actions/workflow/status/pawello2222/AppIconGenerator/ci.yml?logo=github" alt="Build">
-  </a>
-  <a href="https://github.com/pawello2222/AppIconGenerator">
-    <img src="https://img.shields.io/badge/language-swift-orange.svg" alt="Language">
-  </a>
-  <a href="https://github.com/pawello2222/AppIconGenerator#installation">
-    <img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey.svg" alt="Supported platforms">
-  </a>
-  <a href="https://github.com/pawello2222/AppIconGenerator#installation">
-    <img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager">
-  </a>
-  <a href="https://github.com/pawello2222/AppIconGenerator/releases">
-    <img src="https://img.shields.io/github/v/release/pawello2222/AppIconGenerator" alt="Release version">
-  </a>
-  <a href="https://github.com/pawello2222/AppIconGenerator/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/github/license/pawello2222/AppIconGenerator" alt="License">
-  </a>
+  <a href="https://github.com/pawello2222/AppIconGenerator/actions?query=branch%3Amain"><img src="https://img.shields.io/github/actions/workflow/status/pawello2222/AppIconGenerator/ci.yml?logo=github" alt="Build"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator"><img src="https://img.shields.io/badge/language-swift-orange.svg" alt="Language"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator#installation"><img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS-lightgrey.svg" alt="Supported platforms"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator#installation"><img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="Swift Package Manager"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator/releases"><img src="https://img.shields.io/github/v/release/pawello2222/AppIconGenerator" alt="Release version"></a>
+  <a href="https://github.com/pawello2222/AppIconGenerator/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/pawello2222/AppIconGenerator" alt="License"></a>
 </p>
 
 # App Icon Generator
